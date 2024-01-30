@@ -28,6 +28,8 @@ class ChangeAttributionWizard(models.TransientModel):
     invoice_line_ids = fields.Many2many(
         "account.move.line",
         "change_attribution_wizard_line_rel",
+        "wizard_id",
+        "move_line_id",
         string="Related invoice lines",
         default=lambda self: self._get_invoice_lines(),
         readonly=True,
