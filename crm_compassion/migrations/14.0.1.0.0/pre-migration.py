@@ -20,8 +20,8 @@ def migrate(env, version):
             ),
             (
                 "event_id",
-                "crm.event.compassion",
-                "crm_event_compassion",
+                "account.move.line",
+                "account_move_line",
                 "many2one",
                 False,
                 "crm_compassion",
