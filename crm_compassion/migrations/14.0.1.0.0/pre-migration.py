@@ -1,7 +1,8 @@
 from openupgradelib import openupgrade
 
 
-def migrate(cr, version):
+@openupgrade.migrate()
+def migrate(env, version):
     openupgrade.rename_fields(
-        cr, [("recurring.contract", "recurring_contract", "user_id", "ambassador_id")]
+        env [("recurring.contract", "recurring_contract", "user_id", "ambassador_id")]
     )
